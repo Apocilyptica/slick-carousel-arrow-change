@@ -16,9 +16,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
 import AppContainer from "./AppContainer";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import SlickCarouselArrowChange from "./concepts/SlickCarouselArrowChange";
+import APP_ACCESS_KEY from "../../blocked/UnsplashAPI";
 import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
@@ -99,7 +97,7 @@ export default function PrimarySearchAppBar() {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [searchValue, setSearchValue] = React.useState("");
   const [submitValue, setSubmitValue] = React.useState(null);
-  const [clientID, setClientID] = React.useState("U95RpOg0BDNzg1w_GvwR3_qaG3N3bps5vE52QGgItyc");
+  const [clientID, setClientID] = React.useState(APP_ACCESS_KEY);
   const [result, setResult] = React.useState([]);
 
   const isMenuOpen = Boolean(anchorEl);
