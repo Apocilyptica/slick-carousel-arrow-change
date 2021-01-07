@@ -1,0 +1,72 @@
+html {
+  font-size: 62.5%; // 1rem is 10px
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Roboto";
+}
+
+body {
+  overflow-x: hidden;
+  font-weight: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  display: block;
+  margin: 0;
+  display: grid;
+  justify-items: center;
+}
+
+.slick-arrow-icon-left,
+.slick-arrow-icon-right {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+  transition: 0.5s ease-in-out;
+  &:hover,
+  &:focus {
+    outline: none;
+    background: transparent;
+    color: black;
+    font-size: 40px;
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.slick-arrow-icon-left {
+  left: -50px;
+  [dir="rtl"] & {
+    left: auto;
+    right: -50px;
+  }
+}
+
+.slick-arrow-icon-right {
+  right: -50px;
+  [dir="rtl"] & {
+    left: -50px;
+    right: auto;
+  }
+}
